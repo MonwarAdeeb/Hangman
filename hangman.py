@@ -24,3 +24,10 @@ hangmanPics = [pygame.image.load('hangman0.png'), pygame.image.load('hangman1.pn
     'hangman3.png'), pygame.image.load('hangman4.png'), pygame.image.load('hangman5.png'), pygame.image.load('hangman6.png')]
 
 limbs = 0
+
+
+def redraw_game_window():
+    global guessed
+    global hangmanPics
+    global limbs
+    win.fill(GREEN)
