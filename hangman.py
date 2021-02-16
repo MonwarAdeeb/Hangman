@@ -31,3 +31,14 @@ def redraw_game_window():
     global hangmanPics
     global limbs
     win.fill(GREEN)
+
+    # Buttons
+    for i in range(len(buttons)):
+        if buttons[i][4]:
+            pygame.draw.circle(
+                win, BLACK, (buttons[i][1], buttons[i][2]), buttons[i][3])
+            pygame.draw.circle(win, buttons[i][0], (buttons[i][1], buttons[i][2]), buttons[i][3] - 2
+                               )
+            label = btn_font.render(chr(buttons[i][5]), 1, BLACK)
+            win.blit(label, (buttons[i][1] - (label.get_width() / 2),
+                             buttons[i][2] - (label.get_height() / 2)))
