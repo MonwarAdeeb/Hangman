@@ -42,3 +42,14 @@ def redraw_game_window():
             label = btn_font.render(chr(buttons[i][5]), 1, BLACK)
             win.blit(label, (buttons[i][1] - (label.get_width() / 2),
                              buttons[i][2] - (label.get_height() / 2)))
+
+    spaced = spacedOut(word, guessed)
+    label1 = guess_font.render(spaced, 1, BLACK)
+    rect = label1.get_rect()
+    length = rect[2]
+
+    win.blit(label1, (winWidth/2 - length/2, 400))
+
+    pic = hangmanPics[limbs]
+    win.blit(pic, (winWidth/2 - pic.get_width()/2 + 20, 150))
+    pygame.display.update()
