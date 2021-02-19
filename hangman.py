@@ -61,3 +61,11 @@ def randomWord():
     i = random.randrange(0, len(f) - 1)
 
     return f[i][:-1]
+
+
+def hang(guess):
+    global word
+    if guess.lower() not in word.lower():
+        return True
+    else:
+        return False
