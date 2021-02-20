@@ -69,3 +69,18 @@ def hang(guess):
         return True
     else:
         return False
+
+
+def spacedOut(word, guessed=[]):
+    spacedWord = ''
+    guessedLetters = guessed
+    for x in range(len(word)):
+        if word[x] != ' ':
+            spacedWord += '_ '
+            for i in range(len(guessedLetters)):
+                if word[x].upper() == guessedLetters[i]:
+                    spacedWord = spacedWord[:-2]
+                    spacedWord += word[x].upper() + ' '
+        elif word[x] == ' ':
+            spacedWord += ' '
+    return spacedWord
