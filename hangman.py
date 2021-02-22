@@ -92,3 +92,12 @@ def buttonHit(x, y):
             if y < buttons[i][2] + 20 and y > buttons[i][2] - 20:
                 return buttons[i][5]
     return None
+
+
+def end(winner=False):
+    global limbs
+    lostTxt = 'You Lost, press any key to play again...'
+    winTxt = 'WINNER!, press any key to play again...'
+    redraw_game_window()
+    pygame.time.delay(1000)
+    win.fill(GREEN)
