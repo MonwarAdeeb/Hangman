@@ -101,3 +101,11 @@ def end(winner=False):
     redraw_game_window()
     pygame.time.delay(1000)
     win.fill(GREEN)
+
+    if winner == True:
+        label = lost_font.render(winTxt, 1, BLACK)
+    else:
+        label = lost_font.render(lostTxt, 1, BLACK)
+
+    wordTxt = lost_font.render(word.upper(), 1, BLACK)
+    wordWas = lost_font.render('The phrase was: ', 1, BLACK)
