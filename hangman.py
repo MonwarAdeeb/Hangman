@@ -114,3 +114,12 @@ def end(winner=False):
     win.blit(wordWas, (winWidth/2 - wordWas.get_width()/2, 245))
     win.blit(label, (winWidth / 2 - label.get_width() / 2, 140))
     pygame.display.update()
+
+    again = True
+    while again:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.KEYDOWN:
+                again = False
+    reset()
