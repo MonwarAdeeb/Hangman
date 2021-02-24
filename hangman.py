@@ -123,3 +123,12 @@ def end(winner=False):
             if event.type == pygame.KEYDOWN:
                 again = False
     reset()
+
+
+def reset():
+    global limbs
+    global guessed
+    global buttons
+    global word
+    for i in range(len(buttons)):
+        buttons[i][4] = True
