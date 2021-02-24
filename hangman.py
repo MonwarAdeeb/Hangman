@@ -109,3 +109,8 @@ def end(winner=False):
 
     wordTxt = lost_font.render(word.upper(), 1, BLACK)
     wordWas = lost_font.render('The phrase was: ', 1, BLACK)
+
+    win.blit(wordTxt, (winWidth/2 - wordTxt.get_width()/2, 295))
+    win.blit(wordWas, (winWidth/2 - wordWas.get_width()/2, 245))
+    win.blit(label, (winWidth / 2 - label.get_width() / 2, 140))
+    pygame.display.update()
