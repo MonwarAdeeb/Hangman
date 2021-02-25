@@ -132,3 +132,7 @@ def reset():
     global word
     for i in range(len(buttons)):
         buttons[i][4] = True
+
+    limbs = 0
+    guessed = []
+    word = randomWord()
