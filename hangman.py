@@ -136,3 +136,16 @@ def reset():
     limbs = 0
     guessed = []
     word = randomWord()
+
+
+# Setup buttons
+increase = round(winWidth / 13)
+for i in range(26):
+    if i < 13:
+        y = 40
+        x = 25 + (increase * i)
+    else:
+        x = 25 + (increase * (i - 13))
+        y = 85
+    buttons.append([LIGHT_BLUE, x, y, 20, True, 65 + i])
+    # buttons.append([color, x_pos, y_pos, radius, visible, char])
