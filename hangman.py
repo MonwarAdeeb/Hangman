@@ -149,3 +149,5 @@ for i in range(26):
         y = 85
     buttons.append([LIGHT_BLUE, x, y, 20, True, 65 + i])
     # buttons.append([color, x_pos, y_pos, radius, visible, char])
+word = randomWord()
+inPlay = True
