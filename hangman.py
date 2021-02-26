@@ -151,3 +151,8 @@ for i in range(26):
     # buttons.append([color, x_pos, y_pos, radius, visible, char])
 word = randomWord()
 inPlay = True
+
+
+while inPlay:
+    redraw_game_window()
+    pygame.time.delay(10)
