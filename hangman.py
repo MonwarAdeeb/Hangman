@@ -96,8 +96,8 @@ def buttonHit(x, y):
 
 def end(winner=False):
     global limbs
-    lostTxt = 'You Lost, press any key to play again...'
-    winTxt = 'WINNER!, press any key to play again...'
+    lostTxt = 'You Lost, press any key to play again'
+    winTxt = 'WINNER!, press any key to play again.'
     redraw_game_window()
     pygame.time.delay(1000)
     win.fill(GREEN)
@@ -149,9 +149,9 @@ for i in range(26):
         y = 85
     buttons.append([LIGHT_BLUE, x, y, 20, True, 65 + i])
     # buttons.append([color, x_pos, y_pos, radius, visible, char])
+
 word = randomWord()
 inPlay = True
-
 
 while inPlay:
     redraw_game_window()
