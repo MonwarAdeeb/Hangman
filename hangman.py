@@ -178,3 +178,7 @@ while inPlay:
                     print(spacedOut(word, guessed))
                     if spacedOut(word, guessed).count('_') == 0:
                         end(True)
+
+pygame.quit()
+
+# always quit pygame when done!
