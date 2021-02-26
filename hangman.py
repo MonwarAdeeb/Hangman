@@ -156,3 +156,10 @@ inPlay = True
 while inPlay:
     redraw_game_window()
     pygame.time.delay(10)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            inPlay = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                inPlay = False
