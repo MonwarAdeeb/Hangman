@@ -163,3 +163,18 @@ while inPlay:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 inPlay = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            clickPos = pygame.mouse.get_pos()
+            letter = buttonHit(clickPos[0], clickPos[1])
+            if letter != None:
+                guessed.append(chr(letter))
+                buttons[letter - 65][4] = False
+                if hang(chr(letter)):
+                    if limbs != 5:
+                        limbs += 1
+                    else:
+                        end()
+                else:
+                    print(spacedOut(word, guessed))
+                    if spacedOut(word, guessed).count('_') == 0:
+                        end(True)
